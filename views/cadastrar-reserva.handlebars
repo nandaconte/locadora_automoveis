@@ -1,0 +1,15 @@
+<h2>Cadastrar Reserva</h2>
+<div class="form">
+<form action="/reservas/cadastrar" method="POST">
+<label for="cpf">CPF</label>
+<input type="text" name="cpf" id="cpf" value="{{tbl_reservas.cpf}}">
+<label for="placa">Placa</label>
+<input type="text" name="placa" id="placa" value="{{tbl_reservas.placa}}">
+
+<label for="dataInicio">Data de Retirada</label>
+<input type="date" name="dataInicio" id="dataInicio" value="{{tbl_reservas.dataInicio}}">
+<label for="dataFim">Data de Devolução</label>
+<input type="date" name="dataFim" id="dataFim" value="{{tbl_reservas.dataFim}}">
+<input type="submit" id="btn" value="Realizar Reserva">
+</form>
+</div>
