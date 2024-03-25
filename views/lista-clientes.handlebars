@@ -1,10 +1,16 @@
 <h2>Clientes Cadastrados</h2>
-<div class="list-container">
+<div class="lista-container">
     {{#each tbl_clientes}}
-    <p>{{this.cpf}}</p> - <p>{{this.nome}}</p>
-    <form action="/clientes/remover/{{tbl_clientes.cpf}}" method="POST">
-    <input type="submit" value="Remover">
+    <div class="lista-card">
+    <p>{{this.cpf}}</p>
+    <p>{{this.nome}}</p>
+    <p>{{this.endereco}}</p>
+    <p>{{this.telefone}}</p>
+    <p>{{this.email}}</p>
+    <form action="/clientes/lista/remove/{{tbl_clientes.cpf}}" method="POST">
+    <input type="submit" class="remover-btn" value="Remover">
     </form>
+    </div>
     {{/each}}
 </div>
 

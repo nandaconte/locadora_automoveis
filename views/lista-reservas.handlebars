@@ -1,9 +1,14 @@
 <h2>Lista de Reservas</h2>
 <div class="list-container">
     {{#each tbl_reservas}}
-    #{{this.id_reserva}}<p>{{this.cpf}}</p> - <p>{{this.placa}}</p> - {{thi.dataInicio}} - {{this.dataFim}}
+    <div class="lista-card">
+    <p>#{{this.id_reserva}}</p>
+    <p>{{this.cpf}}</p> 
+    <p>{{this.placa}}</p> 
+    <p>{{thi.dataInicio}}</p>  <p>{{this.dataFim}}</p>
     <form action="/reservas/remover/{{tbl_reservas.id_reserva}}" method="POST">
     <input type="submit" value="Remover">
     </form>
+    </div>
     {{/each}}
 </div>

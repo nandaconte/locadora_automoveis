@@ -61,13 +61,14 @@ app.get('/clientes/lista', function (req, res) {
       if (err) {
         console.log(err)
       }
-      const clientes = data
+      const tbl_clientes = data
   
       console.log(data)
   
-      res.render('lista-clientes', { clientes })
+      res.render('lista-clientes', { tbl_clientes })
     })
   });
+  
 // Fim Lista de Clientes
 
 //Veiculos
@@ -109,11 +110,11 @@ app.get('/veiculos/lista', function (req, res) {
       if (err) {
         console.log(err)
       }
-      const veiculos = data
+      const tbl_veiculos = data
   
       console.log(data)
   
-      res.render('lista-veiculos', { veiculos })
+      res.render('lista-veiculos', { tbl_veiculos })
     })
   });
   //Fim Lista de Veiculos
@@ -163,11 +164,11 @@ app.get('/reservas/lista', function (req, res) {
       if (err) {
         console.log(err)
       }
-      const reservas = data
+      const tbl_reservas = data
   
       console.log(data)
   
-      res.render('lista-reservas', {reservas})
+      res.render('lista-reservas', {tbl_reservas})
     })
   });
   //FIM LISTA RESERVA

@@ -107,3 +107,28 @@ form input{
     color:#DDDDDD;
     background-color: #76885B;
 }
+
+.lista-container{
+    display: flex;
+    margin: 2rem;
+   width: 150px;
+}
+.lista-card{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem;
+    text-align: center;
+    background-color: beige;
+}
+.lista-card p{
+    margin-bottom: 0.5rem;
+
+}
+.lista-card input{
+    width: 75px;
+    display: flex;
+    justify-content: center;
+    
+    justify-content: center;
+}
