@@ -14,7 +14,7 @@ modelo char (50) not null,
 ano char (4) not null);
 
 create table tbl_reservas(
-id_reserva int auto_increment primary key,
+idRreserva int auto_increment primary key,
 cpf char (12),
 placa char(10),
 dataInicio date,

@@ -174,7 +174,45 @@ app.get('/reservas/lista', function (req, res) {
   //FIM LISTA RESERVA
 
 
+  //Remover
+  app.post('/clientes/remover/:cpf', function (req, res) {
+    const cpf = req.params.cpf
+    const query = `DELETE FROM tbl_clientes WHERE ?? = ?`
+    const data = ['cpf', cpf]
+  
+    pool.query(query, data, function (err) {
+      if (err) {
+        console.log(err)
+      }
+      res.redirect('/clientes')
+    })
+  });
 
+  app.post('/veiculos/remover/:placa', function (req, res) {
+    const placa = req.params.placa
+    const query = `DELETE FROM tbl_veiculos WHERE ?? = ?`
+    const data = ['placa', placa]
+  
+    pool.query(query, data, function (err) {
+      if (err) {
+        console.log(err)
+      }
+      res.redirect('/veiculos')
+    })
+  });
+
+  app.post('/reservas/remover/:idReserva', function (req, res) {
+    const idReserva = req.params.idReserva
+    const query = `DELETE FROM tbl_reservas WHERE ?? = ?`
+    const data = ['idReserva', idReserva]
+  
+    pool.query(query, data, function (err) {
+      if (err) {
+        console.log(err)
+      }
+      res.redirect('/reservas')
+    })
+  });
 
 
    

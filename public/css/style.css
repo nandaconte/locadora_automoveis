@@ -132,3 +132,15 @@ form input{
     
     justify-content: center;
 }
+.container-reservas{
+    width: 650px;
+    margin: 1rem;
+}
+.reservas p{
+    font-weight: bold;
+  
+}
+.reservas span{
+    margin-bottom: 0.5rem;
+
+}

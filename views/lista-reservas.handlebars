@@ -1,12 +1,13 @@
 <h2>Lista de Reservas</h2>
-<div class="list-container">
+<div class="container-reservas">
     {{#each tbl_reservas}}
-    <div class="lista-card">
-    <p>#{{this.id_reserva}}</p>
-    <p>{{this.cpf}}</p> 
-    <p>{{this.placa}}</p> 
-    <p>{{thi.dataInicio}}</p>  <p>{{this.dataFim}}</p>
-    <form action="/reservas/remover/{{tbl_reservas.id_reserva}}" method="POST">
+    <div class="lista-card reservas">
+    <p>#{{this.idReserva}}</p>
+    <p>CPF:</p> <span>{{this.cpf}} </span>
+    <p> Placa: </p><span>{{this.placa}}</span>
+    <p>Data de Retirada: </p><span>{{this.dataInicio}}  </span>
+    <p>Data de Devolução:</p> <span>{{this.dataFim}}</span>
+    <form action="/reservas/remover/{{this.idReserva}}" method="POST">
     <input type="submit" value="Remover">
     </form>
     </div>
