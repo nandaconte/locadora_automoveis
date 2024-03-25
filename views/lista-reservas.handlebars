@@ -2,7 +2,7 @@
 <div class="list-container">
     {{#each tbl_reservas}}
     #{{this.id_reserva}}<p>{{this.cpf}}</p> - <p>{{this.placa}}</p> - {{thi.dataInicio}} - {{this.dataFim}}
-    <form action="/reservas/remover/{{tbl_reservas.id_reserva}}" method="POST">
+    <form action="/reservas/remover/{{this.id}}" method="POST">
     <input type="submit" value="Remover">
     </form>
     {{/each}}

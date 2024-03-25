@@ -17,7 +17,7 @@ create table tbl_reservas(
 id_reserva int auto_increment primary key,
 cpf char (12),
 placa char(10),
-data_inicio datetime,
-date_fim datetime,
+dataInicio datetime,
+dateFim datetime,
 foreign key (cpf) references tbl_clientes(cpf),
 foreign key (placa) references  tbl_veiculos(placa));

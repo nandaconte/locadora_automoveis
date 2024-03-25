@@ -2,7 +2,7 @@
 <div class="list-container">
     {{#each tbl_clientes}}
     <p>{{this.cpf}}</p> - <p>{{this.nome}}</p>
-    <form action="/clientes/remover/{{tbl_clientes.cpf}}" method="POST">
+    <form action="/clientes/remover/{{this.cpf}}" method="POST">
     <input type="submit" value="Remover">
     </form>
     {{/each}}

@@ -61,11 +61,11 @@ app.get('/clientes/lista', function (req, res) {
       if (err) {
         console.log(err)
       }
-      const clientes = data
+      const tbl_clientes = data
   
       console.log(data)
   
-      res.render('lista-clientes', { clientes })
+      res.render('lista-clientes', {tbl_clientes})
     })
   });
 // Fim Lista de Clientes
@@ -109,11 +109,11 @@ app.get('/veiculos/lista', function (req, res) {
       if (err) {
         console.log(err)
       }
-      const veiculos = data
+      const tbl_veiculos = data
   
       console.log(data)
   
-      res.render('lista-veiculos', { veiculos })
+      res.render('lista-veiculos', {tbl_veiculos})
     })
   });
   //Fim Lista de Veiculos
@@ -163,22 +163,57 @@ app.get('/reservas/lista', function (req, res) {
       if (err) {
         console.log(err)
       }
-      const reservas = data
+      const tbl_reservas = data
   
       console.log(data)
   
-      res.render('lista-reservas', {reservas})
+      res.render('lista-reservas', {tbl_reservas})
     })
   });
   //FIM LISTA RESERVA
 
 
 
+//REMOVE
 
+app.post('/clientes/remover/:cpf', function (req, res) {
+  const cpf = req.params.cpf
+  const query = `DELETE FROM tbl_clientes WHERE ?? = ?`
+  const data = ['cpf', cpf]
 
-   
+  pool.query(query, data, function (err) {
+    if (err) {
+      console.log(err)
+    }
+    res.redirect('/')
+  })
+})
 
+app.post('/veiculos/remover/:placa', function (req, res) {
+  const placa = req.params.placa
+  const query = `DELETE FROM tbl_veiculos WHERE ?? = ?`
+  const data = ['placa', placa]
 
+  pool.query(query, data, function (err) {
+    if (err) {
+      console.log(err)
+    }
+    res.redirect('/')
+  })
+})
+
+app.post('/reservas/remover/:id', function (req, res) {
+  const id = req.params.id
+  const query = `DELETE FROM tbl_reservas WHERE ?? = ?`
+  const data = ['id', id]
+
+  pool.query(query, data, function (err) {
+    if (err) {
+      console.log(err)
+    }
+    res.redirect('/')
+  })
+})
 
 // ===============================
 const PORT = process.env.PORT || 3000;
